@@ -1,0 +1,21 @@
+<?php
+    $name=$_POST['name'];
+    $date=$_POST['date'];
+    $job=$_POST['job'];
+    $email=$_POST['email'];
+    $nameFile=$_POST['user'];
+    $password=$_POST['pass'];
+    $filePath="data/".$nameFile.".txt";
+    $writeFile = fopen($filePath,'w');
+    fwrite($writeFile,$name);
+    fwrite($writeFile,"\n");
+    fwrite($writeFile,$date);
+    fwrite($writeFile,"\n");
+    fwrite($writeFile,$job);
+    fwrite($writeFile,"\n");
+    fwrite($writeFile,$email);
+    fwrite($writeFile,"\n");
+    fwrite($writeFile,$nameFile);
+    fwrite($writeFile,"\n");
+    fwrite($writeFile,$password);
+    fclose($writeFile);
